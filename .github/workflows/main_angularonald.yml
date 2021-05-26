@@ -41,4 +41,4 @@ jobs:
       with:
         app-name: 'angularonald'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_26b6152f08c441c3b1688b0040c1c590 }}
-        package: .
+        package: ./dist/angularonald
