@@ -30,9 +30,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
     - name: 'Deploy to Azure Web App'
@@ -41,4 +38,4 @@ jobs:
       with:
         app-name: 'angularonald'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_26b6152f08c441c3b1688b0040c1c590 }}
-        package: dist/angularonald
+        package: .
